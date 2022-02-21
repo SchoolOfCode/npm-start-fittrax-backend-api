@@ -1,4 +1,5 @@
-const data = [
+export {};
+export const data = [
   {
     name: "Push workout",
     description: "trains: chest, shoulders, triceps",
