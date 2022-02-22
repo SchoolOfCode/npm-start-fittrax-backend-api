@@ -28,4 +28,14 @@ export default async function handler(
     console.log("post request received");
     res.json(data.rows);
   }
+
+  if (req.method === "DELETE"){
+    const data = await query(
+      "DELETE FROM workouts WHERE id = $1;", 
+      [req.body.id]
+    );
+    res.json({message: "Request deleted"});
+  }
 }
+
+
