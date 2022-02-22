@@ -22,20 +22,17 @@ export default async function handler(
   if (req.method === "POST") {
     const el = req.body;
     const data = await query(
-      "INSERT INTO workouts (id, name, description, difficulty) VALUES($1, $2, $3, $4);",
-      [el.id, el.name, el.description, el.difficulty]
+      "INSERT INTO workouts (id, workout_name, workout_type, workout_difficulty) VALUES($1, $2, $3, $4);",
+      [el.id, el.workout_name, el.workout_type, el.workout_difficulty]
     );
-    console.log("post request received");
+
     res.json(data.rows);
   }
 
-  if (req.method === "DELETE"){
-    const data = await query(
-      "DELETE FROM workouts WHERE id = $1;", 
-      [req.body.id]
-    );
-    res.json({message: "Request deleted"});
+  if (req.method === "DELETE") {
+    const data = await query("DELETE FROM workouts WHERE id = $1;", [
+      req.body.id,
+    ]);
+    res.json({ message: "Request deleted" });
   }
 }
-
-

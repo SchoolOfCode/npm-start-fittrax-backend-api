@@ -45,7 +45,7 @@ var populateWorkoutTable = function () { return __awaiter(void 0, void 0, void 0
             var result;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO workouts (id, name, description, difficulty) VALUES ($1, $2, $3, $4);", [el.id, el.workout_name, el.workout_type, el.workout_difficulty])];
+                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO workouts (id, workout_name, workout_type, workout_difficulty) VALUES ($1, $2, $3, $4);", [el.id, el.workout_name, el.workout_type, el.workout_difficulty])];
                     case 1:
                         result = _a.sent();
                         return [2 /*return*/];
@@ -61,7 +61,7 @@ var populateExerciseTable = function () { return __awaiter(void 0, void 0, void 
             var result;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO exercises (name, sets, reps, rest_period, workout_ref) VALUES ($1, $2, $3, $4, $5);", [el.exercise_name, el.sets, el.reps, el.restPeriod, el.workout_ref])];
+                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO exercises (exercise_name, sets, reps, rest_period, workout_ref) VALUES ($1, $2, $3, $4, $5);", [el.exercise_name, el.sets, el.reps, el.restPeriod, el.workout_ref])];
                     case 1:
                         result = _a.sent();
                         return [2 /*return*/];
