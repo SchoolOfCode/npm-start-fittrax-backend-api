@@ -61,7 +61,7 @@ var populateExerciseTable = function () { return __awaiter(void 0, void 0, void 
             var result;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO exercises (name, sets, reps, rest_period, work_ref) VALUES ($1, $2, $3, $4, $5);", [el.name, el.sets, el.reps, el.restPeriod, el.workout_ref])];
+                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO exercises (name, sets, reps, rest_period, workout_ref) VALUES ($1, $2, $3, $4, $5);", [el.name, el.sets, el.reps, el.restPeriod, el.workout_ref])];
                     case 1:
                         result = _a.sent();
                         return [2 /*return*/];
